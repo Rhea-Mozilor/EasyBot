@@ -1,0 +1,7 @@
+slack-bolt==1.20.1
+slack-sdk==3.33.4
+python-dotenv==1.0.1
+PyMySQL>=1.1
+# Pick ONE of the two LLM providers (or both):
+google-genai>=1.0        # Gemini - default in llm.py
+openai==1.54.4           # used only if you set LLM_PROVIDER=openai in .env

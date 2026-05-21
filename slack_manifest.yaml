@@ -1,0 +1,46 @@
+display_information:
+  name: EasyBot
+  description: Owner-curated, channel-native Single Source of Truth for team decisions.
+  background_color: "#1d3557"
+
+features:
+  bot_user:
+    display_name: EasyBot
+    always_online: true
+  slash_commands:
+    - command: /easybot
+      description: Search and browse EasyBot's knowledge base
+      usage_hint: "list | search <query> | search --global <query>"
+      should_escape: false
+
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - channels:read
+      - chat:write
+      - chat:write.public
+      - groups:history
+      - groups:read
+      - im:write
+      - mpim:history
+      - mpim:read
+      - mpim:write
+      - reactions:read
+      - reactions:write
+      - users:read
+
+settings:
+  event_subscriptions:
+    bot_events:
+      - message.channels
+      - message.groups
+      - message.mpim
+      - reaction_added
+      - app_mention
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
